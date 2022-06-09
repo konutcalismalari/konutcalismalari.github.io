@@ -15,7 +15,9 @@
 
     <p>Bu sayfa Türkiye’de konut çalışmaları alanında yayınlanan kitap ve makaleleri dizinlemek ve açık bir kaynak oluşturmak amacıyla kurulmuştur. Eklemek istediğiniz kaynakları <a href="/form.html"> bu formu</a> doldurarak ekleyebilirsiniz. </p>
 
-    <table>
+    <input type="text" id="search-bar" onkeyup="myFunction()" placeholder="Search for names..">
+
+    <table id="main-table">
         <tr>
           <th>Kaynak Tipi</th>
           <th>Başlık</th>
@@ -45,7 +47,29 @@
         </tr>
         
     </table>
+
+    <script>
+      function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("search-bar");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("main-table");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
+      }
+      </script>
     </body>
+  </html>
 
    
 
