@@ -117,8 +117,11 @@ input, textarea {
   font-weight: 400;
   border  : none;
   padding : 5px 5px;
-  margin  : 0;
-  width   : 50%;
+  width   : 30%;
   background : #eed8c8;
 }
 
+.searchbarclass {
+
+  padding: 1vh;
+}
