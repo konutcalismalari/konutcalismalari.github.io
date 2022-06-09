@@ -1,0 +1,124 @@
+/* and */
+/*fonts styling */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Serif+Pro:wght@300&display=swap');
+/*background, padding */
+
+body {
+  height: 100%;
+  background-color: #EFEBE8;
+  margin-left: 5vw;
+  margin-top: 1vh;
+}
+
+@media (min-width: 320px) and (max-width: 899px) {
+  body {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1100px) {
+  body {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 1100px) {
+  body {
+    width: 90vw;
+  }
+}
+
+/*fonts etc. */
+
+
+html {
+    vertical-align: top;
+    color: #000000;
+    font-family: 'Source Serif Pro', serif;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1vh;
+    padding-bottom: 5vh;
+  }
+  
+p, li, ul, u {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+  }
+
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+/*link styling */
+a {
+  color: #333333;
+
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: none;
+}
+
+/* Table Styles */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  font-family: 'Libre Baskerville', serif;
+  font-size: small;
+  font-weight: 400;
+  border-bottom: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: smaller;
+  border-bottom: 2px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #eed8c8;
+}
+
+/* Form Styles */
+
+input, textarea {
+  font-family: 'Libre Baskerville', serif;
+  font-size: small;
+  font-weight: 400;
+  border  : none;
+  padding : 5px 5px;
+  margin  : 0;
+  width   : 50%;
+  background : #eed8c8;
+}
+
