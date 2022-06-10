@@ -30,26 +30,33 @@ body {
 
 /*fonts etc. */
 
+html,body {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
 
 html {
     vertical-align: top;
     color: #000000;
     font-family: 'Source Serif Pro', serif;
+    font-size: 16px;
     height: 100%;
 }
 
 h1 {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 25px;
-    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    line-height: 120%;
     font-weight: 600;
-    text-align: center;
+    text-align: left;
     margin-top: 1vh;
     padding-bottom: 5vh;
   }
   
 p, li, ul, u {
-    font-size: 1rem;
+    font-size: medium;
     line-height: 1.5;
     font-weight: normal;
   }
@@ -86,6 +93,7 @@ table {
   table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
+  min-width: 700px;
 }
 
 td {
@@ -119,6 +127,7 @@ input, textarea {
   font-weight: 400;
   border  : none;
   padding : 5px 5px;
-  width   : 30%;
+  width: 600px;
+  min-width: 350px;
   background : #eed8c8;
 }
