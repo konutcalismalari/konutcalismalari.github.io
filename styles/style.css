@@ -125,7 +125,7 @@ tr:nth-child(even) {
 
 /* Form Styles */
 
-#search-bar, textarea {
+input, textarea {
   font-family: 'Libre Baskerville', serif;
   font-size: small;
   font-weight: 400;
