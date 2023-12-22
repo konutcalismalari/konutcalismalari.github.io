@@ -5,7 +5,7 @@
 
 body {
   height: 100%;
-  background-color: #EFEBE8;
+  background-color: white;
   margin-left: 5vw;
   margin-top: 1vh;
   width: 90vw,
@@ -41,14 +41,14 @@ html,body {
 html {
     vertical-align: top;
     color: black;
-    font-family: 'Source Serif Pro', serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     height: 100%;
 }
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
+    font-size: x-large;
     line-height: 120%;
     font-weight: 600;
     text-align: left;
@@ -101,8 +101,8 @@ table {
 }
 
 td {
-  font-family: 'Libre Baskerville', serif;
-  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: normal;
   font-weight: 400;
   border-bottom: 1px solid #000000;
   text-align: left;
@@ -153,17 +153,17 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #eed8c8;
+  background-color: #e2e2e2;
 }
 
 /* Form Styles */
 
 input, textarea {
-  font-family: 'Libre Baskerville', serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: small;
   font-weight: 400;
   border  : none;
   padding : 5px 5px;
-  width: 89vw;
-  background : #eed8c8;
+  width: 89.5vw;
+  background : #e2e2e2;
 }
