@@ -167,3 +167,14 @@ input, textarea {
   width: 89.5vw;
   background : #e2e2e2;
 }
+
+.header_column {
+    flex: 50%;
+    width: 50%;
+}
+
+.header_container{
+  width: 89.5vw;
+  display: flex;
+
+}
