@@ -171,10 +171,10 @@ input, textarea {
 .header_column {
     flex: 50%;
     width: 50%;
+    padding-right: 5%;
 }
 
 .header_container{
   width: 89.5vw;
   display: flex;
-
 }
