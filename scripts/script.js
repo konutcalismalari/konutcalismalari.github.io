@@ -61,3 +61,27 @@ while (switching) {
     }
 }
 }
+
+// Use D3 to load and parse the CSV file
+d3.csv('data.csv').then(function(data) {
+    renderTable(data);  // Pass the data to the table rendering function
+});
+
+// Function to render the table
+function renderTable(data) {
+    const tableBody = document.querySelector('#dataTable tbody'); // Get the table body to insert rows
+
+    // Loop through the data and create table rows
+    data.forEach(row => {
+        const tr = document.createElement('tr');
+
+        // Loop through each key-value pair in the row
+        Object.values(row).forEach(value => {
+            const td = document.createElement('td');
+            td.textContent = value; // Insert the cell value
+            tr.appendChild(td);     // Append the cell to the row
+        });
+
+        tableBody.appendChild(tr);  // Append the row to the table body
+    });
+}
