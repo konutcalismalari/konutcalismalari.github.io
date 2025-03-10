@@ -1,9 +1,53 @@
+d3.csv('./data.csv').then(function(data) {
+    renderTable(data); 
+});
+
+// Function to render the table
+function renderTable(data) {
+    const tableBody = document.querySelector('#dataTable tbody');
+
+    data.forEach(function(row) {
+        const tr = document.createElement('tr');
+
+        Object.keys(row).forEach(function(key) {
+            if (key === "Open Access") {
+                return;
+            }
+
+            const td = document.createElement('td');
+
+            if (key === "Link") {
+                const link = document.createElement('a');
+                link.href = row[key];
+                link.textContent = '⟶';
+                link.style.fontSize = "xx-large";
+
+                if (row['Open Access'] === 'TRUE') {
+                    link.classList.add("open-access-true");
+                } else {
+                    link.classList.add("open-access-false");
+                }
+
+                td.appendChild(link);
+
+            } else {
+                td.textContent = row[key];
+            }
+
+            tr.appendChild(td);
+        });
+
+        tableBody.appendChild(tr);
+    });
+}
+
+
 
 function searchTable() {
     var input, filter, found, table, tr, td, i, j;
     input = document.getElementById("search-bar");
     filter = input.value.toUpperCase();
-    table = document.getElementById("main-table");
+    table = document.getElementById("dataTable");
     tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td");
@@ -23,7 +67,7 @@ function searchTable() {
 
 function sortTable(n) {
 var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-table = document.getElementById("main-table");
+table = document.getElementById("dataTable");
 switching = true;
 dir = "asc";
 while (switching) {
@@ -60,28 +104,4 @@ while (switching) {
     }
     }
 }
-}
-
-// Use D3 to load and parse the CSV file
-d3.csv('data.csv').then(function(data) {
-    renderTable(data);  // Pass the data to the table rendering function
-});
-
-// Function to render the table
-function renderTable(data) {
-    const tableBody = document.querySelector('#dataTable tbody'); // Get the table body to insert rows
-
-    // Loop through the data and create table rows
-    data.forEach(row => {
-        const tr = document.createElement('tr');
-
-        // Loop through each key-value pair in the row
-        Object.values(row).forEach(value => {
-            const td = document.createElement('td');
-            td.textContent = value; // Insert the cell value
-            tr.appendChild(td);     // Append the cell to the row
-        });
-
-        tableBody.appendChild(tr);  // Append the row to the table body
-    });
 }
