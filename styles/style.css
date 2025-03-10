@@ -87,8 +87,8 @@ a:hover {
 a:active {
   text-decoration: none;
 }
-.open-access {
-  color: #cc5500
+.open-access-true {
+  color: #cc5500 !important;
 }
 
 /* Table Styles */
